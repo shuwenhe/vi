@@ -96,120 +96,23 @@ ShuwenHe\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{ECS云服务器}
-\url{https://ecs.console.aliyun.com/home#/}
-
-\chapter{OSS对象存储}
-\url{https://oss.console.aliyun.com/overview}\\
-OSS Bucket:sidsa-statics 绑定的域名:sidsa-statics.sidsa.cn \\
-OSS Bucket:sidsa-statics 绑定的域名:api-svc.sidsa.cn 上托管的 SSL证书\\
-OSSBucket:sidsa-admin-ui 绑定的域名:admin.sidsa.cn 上托管的SSL证书
-
-\section{Bucket列表}
-\begin{tabular}{|c|c|c|c|}
-\hline
-Bucket名称 & 音标 & 译意 & 词根词缀\\
-\hline
-sidsa-admin-ui & /bre\textipa{I}s/ & n. 算法 & \\
-\hline
-sidsa-statics & /bre\textipa{I}s/ & n. 算法 & \\
-\hline
-\end{tabular}
-
-\chapter{Kubernetes容器服务}
-ACK容器服务\\
-容器服务控制台\\
-\url{https://cs.console.aliyun.com/#/k8s/cluster/list}\\
-kubernetes ingress\\
-集群类型\\
-ASK标准版\\
-连接信息\\
-将以下内容复制到计算机\$HOME/.kube/config 文件下\\
-\url{https://cs.console.aliyun.com/#/k8s/cluster/ccbdf99b67d43401ca4efa97df9c57ca1/v2/info/overview?clusterType=Ask&profile=Serverless&state=running&region=cn-beijing}
-
-\section{安全组}
-\url{https://ecs.console.aliyun.com/?spm=5176.2020520152.0.0.5b4716ddDZwSYN#/securityGroupDetail/region/cn-beijing/groupId/sg-2zeb7b92uw0gva2tum21/detail/intranetIngress}
-
-\chapter{SLB负载均衡}
-Server Load Balancer\\
-负载均衡 SLB->传统型负载均衡 CLB/证书管理->替换证书
-
-\chapter{DNS云解析}
-\section{域名解析}
-\url{https://dns.console.aliyun.com/?spm=5176.12818093_-128809398.0.dre2.225d16d0N6HJJQ#/dns/domainList}
-
-\chapter{SSL数字证书管理服务}
-\section{数字证书管理服务}
-数字证书管理服务\\
-\url{https://yundun.console.aliyun.com/?spm=5176.12818093_-1363046575.top-nav.87.3be916d05lDJYo&p=cas#/overview/cn-hangzhou}\\
-
-\section{证书申请}
-申请SSL证书出现审核失败的原因及处理方法\\
-\url{https://help.aliyun.com/document_detail/48720.html?spm=0.2020520163.help.dexternal.6609p95bp95bWJ}\\
-已经成功提交到CA公司，请您保持电话畅通，并及时查阅邮箱中来自CA公司的电子邮件。\\
-三步完成DNS验证\\
-1.登录域名管理控制台\\
-2.在域名控制台添加DNS解析记录\\
-\begin{tabular}{|c|c|}
-\hline
-配置项目 & 配置项值 \\
-\hline
-域名授权验证类型 & DNS \\
-\hline
-记录类型 & TXT \\
-\hline
-主机记录 & \_dnsauth \\
-\hline
-记录值 & 202307230000000dsvfzctvd42et8ujeg1ipeis8piq737hgz8j2968nue8uy97n \\
-\hline
-\end{tabular}
-
-
-\section{设置TXT解析记录}
-到域名服务商处设置\\
-TXT记录不正确,删除旧的主机记录为\_dnsauth的TXT解析记录，并新添加\\
-主机记录   \_dnsauth\\
-记录值      202307230000000dsvfzctvd42et8ujeg1ipeis8piq737hgz8j2968nue8uy97n\\
-删除之前所有的TXT解析记录
-
-\section{SSL证书}
-SSL证书\\
-\url{https://yundun.console.aliyun.com/?spm=5176.12818093_-1363046575.top-nav.87.3be916d05lDJYo&p=cas#/certExtend/buy/cn-hangzhou}\\
-阿里云配置ingress gateway ssl cert\\
-\begin{tabular}{|c|c|c|c|}
-\hline
- & 网关 & SSL & \\
-\hline
-ingress & gateway & ssl & cert\\
-\hline
-\end{tabular}
-
-\section{ingress}
-ALB Ingress配置HTTPS监听证书\\
-\url{https://help.aliyun.com/zh/ack/ack-managed-and-ack-dedicated/user-guide/use-an-alb-ingress-to-configure-certificates-for-an-https-listener?spm=5176.smartservice_service_robot_chat_new.0.0.4d2df625AStz5j}\\
-证书名称\\
-alb-ingress-cert-v2 \\
-证书域名\\
-kubernetes ingress controller fake certificate\\
-过期时间\\
-2122年3月16日15:24:16\\
-证书来源\\
-用户上传
-
-\section{上传SSL证书}
-\url{https://help.aliyun.com/document_detail/98573.html?spm=0.2020520163.help.dexternal.529d1aYT1aYTTt#section-h2t-3mw-yfb}\\
-\begin{tabular}{|c|c|c|c|}
-\hline
-PEM编码格式的SSL证书文件 & gateway & ssl & cert\\
-\hline
-\end{tabular}
-
-\section{gateway}
-\section{ssl}
-\section{cert}
-
-\chapter{VPC专有网络}
-\url{https://vpc.console.aliyun.com/overview}\\
+\chapter{mac}
+\section{mac终端vim编辑器配置}
+\url{https://zhuanlan.zhihu.com/p/359203134}
+\begin{lstlisting}[language=C++]
+vim ~/.bash_profile
+export CLICOLOR=1
+export LSCOLORS=ExGxFxdaCxDaDahbadeche
+export PS1='\[\033[01;36m\]\u@\h\[\033[01;32m\] \W\$\[\033[00m\] '
+vim ~/.vimrc
+syntax on
+set number
+set cindent
+set smartindent
+set showmatch
+set ruler
+:set mouse=a
+\end{lstlisting}
 
 
 \clearpage
