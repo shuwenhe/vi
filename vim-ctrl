@@ -1,0 +1,4 @@
+vscode-vim-如何使用系统的ctrl-c, 复制粘贴
+1. ctrl + p
+2. 在弹出的小框中输入settings.json 回车
+3. 在最外层json末尾添加：    "vim.useCtrlKeys": true 
